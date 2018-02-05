@@ -2,7 +2,7 @@
 
 #### Pyton 3.6.4
 
-#### Implemented a four-function calculator functions by sending web request to a Django application running server-side. 
+#### Implemented the calculator functions by sending web request to a Django application running server-side. 
 
 #### ● Learned how requests are routed and processed in a typical MVC web application.
 
