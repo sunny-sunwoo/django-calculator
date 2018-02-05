@@ -1,6 +1,6 @@
 # Django-Calculator
 
-###### Pyton 3.6.4
+###### Pyton 2.7.10
 
 ###### Implemented the calculator functions by sending web request to a Django application running server-side. 
 
