@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,  initial-scale=1.0">
+
+	<title>hw1 | calculator</title>
+	<link rel="stylesheet" href="static/calculator/calculator.css">
+	<!-- <script src=static/calculator/calculator.js></script> -->
+</head>
+
+<body>
+	<form method="POST">
+		<input type="hidden" name="display_number" value="{{display_number}}">	
+		<input type="hidden" name="opr" value="{{opr}}">
+		<input type="hidden" name="prev_number" value="{{prev_number}}">
+		<input type="hidden" name="new_number" value="{{new_number}}">
+		
+	<div class="calculator">
+	<div class="screen" id="screen-number">
+	{{display_number}}
+	</div>
+
+	
+
+	<div class="btn">
+	
+	<div class="row">
+		<button class="num" value="7" name="btn_num" type="submit">7</button>
+		<button class="num" value="8" name="btn_num" type="submit">8</button>
+		<button class="num" value="9" name="btn_num" type="submit">9</button>
+		<button class="operator" value="+" name="btn_opr" type="submit">&plus;</button>	
+	</div>
+	
+	<div class="row">
+		<button class="num" value="4" name="btn_num" type="submit">4</button>
+		<button class="num" value="5" name="btn_num" type="submit">5</button>
+		<button class="num" value="6" name="btn_num" type="submit">6</button>
+		<button class="operator" value="-" name="btn_opr" type="submit">&minus;</button>
+	</div>
+	
+	<div class="row">
+		<button class="num" value="1" name="btn_num" type="submit">1</button>
+		<button class="num" value="2" name="btn_num" type="submit">2</button>
+		<button class="num" value="3" name="btn_num" type="submit">3</button>
+		<button class="operator" value="*" name="btn_opr" type="submit">&times;</button>
+	</div>
+
+	<div class="row">
+		<button class="num blank" value="0" >0</button>
+		<button class="num" value="0" name="btn_num" type="submit">0</button>
+		<button class="operator" value="=" name="btn_opr" type="submit">&equals;</button>
+		<button class="operator" value="/" name="btn_opr" type="submit">&divide;</button>
+	</div>
+	</div>
+	</div>
+	
+	{% if msg %}
+		<h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{msg}}</h3>
+	{% endif %}
+
+	{% csrf_token %} 
+	</form>
+	
+</body>
+</html>
